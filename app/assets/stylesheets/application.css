@@ -1,0 +1,196 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+ /*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ :root {
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+   }
+  
+   * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+   }
+  
+   body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+   }
+  
+   #newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100vh;
+   }
+  
+   .content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 24px;
+   }
+  
+   .content-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+   }
+  
+   .conten-header p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+   }
+   
+  ul li {
+    list-style: none;
+    line-height: 1.5;
+   }
+   li::before {
+    content: url(/icon-list.svg);
+    margin-right: 10px;
+   }
+  
+   .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+   }
+  
+   .form label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+   }
+  
+   .form input {
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    padding: 16px;
+   }
+  
+   .form input[type="submit"], #success a {
+    background-color: var(--dark-slate-grey);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+   }
+  
+   #icon-success {
+      width: 64px;
+      height: 64px;
+   }
+  
+   #success {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 24px;
+      padding: 0 24px;
+      margin-top: 150px;
+   }
+  
+   #success .email {
+      font-weight: 700;
+   }
+  
+   #success a {
+      text-decoration: none;
+      text-align: center;
+      justify-content: flex-end;
+      margin-top: 263px;
+   }
+  
+  
+   .attribution { font-size: 11px; text-align: center; }
+   .attribution a { color: hsl(228, 45%, 44%); }
+  
+   @media (min-width: 1024px) {
+      body {
+          background-color: var(--dark-slate-grey);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100vw;
+          height: 100vh;
+      }
+  
+      #illustration {
+          width: 400px;
+          height: 593px;
+          object-fit: cover;
+          border-radius: 18px;
+          margin: 24px;
+      }
+  
+      #newsletter {
+          flex-direction: row-reverse;
+          align-items: center;
+          justify-content: center;
+          max-width: 928px;
+          margin: auto;
+          background-color: var(--white);
+          border-radius: 36px;
+          max-height: 641px;
+      }
+
+      input {
+        cursor: pointer;
+      }
+  
+      .content {
+          justify-content: center;
+          padding: 24px;
+          margin-left: 24px;
+      }
+  
+      h1 {
+          font-size: 56px;
+          font-weight: 700;
+      }
+  
+      #success {
+          width: 504px;
+          height: 520px;
+          background-color: var(--white);
+          margin: auto;
+          border-radius: 36px;
+          padding: 64px 48px;
+      }
+  
+      #success a {
+          margin-top: 0;
+      }
+   }
