@@ -11,10 +11,17 @@
             </ul>
         </div>
         <div class="content-form">
-            <%= form_with(url: success_path, html: { novalidate: true }, method: :post, class: "form", data: { turbo: true }) do |form| %>
-              <%= form.label :email, "Email address" %>
-              <%= form.email_field :email, required: true, placeholder: "email@company.com", validate: true %>
-              <span class="error-message"></span>
+            <%= form_with(url: success_path, html: { novalidate: true }, class: "form", data: { controller: "form-validation" }) do |form| %>
+              <div class="form-group">
+                <%= form.label :email, "Email address" %>
+                <span class="error-message"></span>
+                <%= form.email_field :email,
+                    required: true,
+                    placeholder: "email@company.com",
+                    oninvalid: "this.setCustomValidity('Valid email required')",
+                    oninput: "this.setCustomValidity('')" %>
+
+              </div>
               <%= form.submit "Subscribe to monthly newsletter" %>
             <% end %>
         </div>

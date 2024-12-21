@@ -132,6 +132,24 @@
       justify-content: flex-end;
       margin-top: 263px;
    }
+
+   .form-group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 4px;
+   }
+
+   input.invalid {
+    border-color: hsl(4, 100%, 67%);
+    color: hsl(4, 100%, 67%);
+    background-color: hsl(4, 100%, 97%);
+  }
+  
+  .error-message {
+    color: hsl(4, 100%, 67%);
+    font-size: 0.875rem;
+  }
   
   
    .attribution { font-size: 11px; text-align: center; }
