@@ -74,7 +74,9 @@
   ul li {
     list-style: none;
     line-height: 1.5;
+    padding: 4px;
    }
+
    li::before {
     content: url(/icon-list.svg);
     margin-right: 10px;
@@ -106,6 +108,12 @@
     padding: 16px;
     font-weight: 700;
     line-height: 1.5;
+   }
+
+   #success a:hover,.form input[type="submit"]:hover {
+    background-color: var(--tomato);
+    cursor: pointer;
+    box-shadow: 0 10px 20px var(--tomato);
    }
   
    #icon-success {
@@ -177,7 +185,7 @@
           height: 593px;
           object-fit: cover;
           border-radius: 18px;
-          margin: 24px;
+          margin-right: 24px;
       }
   
       #newsletter {
